@@ -129,6 +129,12 @@ if [ "${ip}" ]; then
             continue
         fi
         ${cmdprefix} ip route "${ipcmd}" "${addr}" dev "${vif}" metric "$metric"
+        if [[ "${command}" = 'online' ]]; then
+            ${cmdprefix} ip neighbor "${ipcmd}" to "${addr}" \
+                dev "${vif}" lladdr 00:16:3e:5e:6c:00 nud permanent ||
+            ${cmdprefix} ip neighbor change to "${addr}" \
+                dev "${vif}" lladdr 00:16:3e:5e:6c:00 nud permanent
+        fi
         if [[ "$addr" = *:* ]]; then
             ipt=ip6tables-restore
         else
