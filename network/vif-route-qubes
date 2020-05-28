@@ -128,7 +128,7 @@ if [ "${ip}" ]; then
             log error "Cannot set IPv6 route to ${addr}, IPv6 disabled in the kernel"
             continue
         fi
-        ${cmdprefix} ip route "${ipcmd}" "${addr}" dev "${vif}" metric "$metric"
+        ${cmdprefix} ip route "${ipcmd}" "${addr}" dev "${vif}" metric "$metric" onlink
         if [[ "${command}" = 'online' ]]; then
             ${cmdprefix} ip neighbor "${ipcmd}" to "${addr}" \
                 dev "${vif}" lladdr 00:16:3e:5e:6c:00 nud permanent ||
