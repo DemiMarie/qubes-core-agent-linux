@@ -31,7 +31,7 @@ start()
 		MEM_CHANGE_THRESHOLD_KB=30000
 		MEMINFO_DELAY_USEC=100000
 		echo -n $"Starting Qubes memory information service:"
-		/usr/lib/qubes/meminfo-writer $MEM_CHANGE_THRESHOLD_KB $MEMINFO_DELAY_USEC /var/run/meminfo-writer.pid
+		/usr/lib/qubes/meminfo-writer $MEM_CHANGE_THRESHOLD_KB $MEMINFO_DELAY_USEC /run/meminfo-writer.pid
 		success
 		echo ""
 	fi

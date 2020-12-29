@@ -11,7 +11,7 @@
 # shellcheck source=init/functions
 . /usr/lib/qubes/init/functions
 
-PIDFILE=/var/run/qubes/qubes-firewall.pid
+PIDFILE=/run/qubes/qubes-firewall.pid
 
 start()
 {

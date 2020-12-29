@@ -11,7 +11,7 @@ qsvc() {
     # Must only be used after qubes-sysinit has started.
     # See qsvc_early for more information.
     local count=100
-    while [ ! -e /var/run/qubes-service-environment ] ; do
+    while [ ! -e /run/qubes-service-environment ] ; do
         if [ "$count" = "0" ] ; then
             echo "qsvc: Warning: qubes-sysinit has not finished executing yet" >&2
             break
@@ -19,7 +19,7 @@ qsvc() {
         sleep 0.1
         count=$(( count - 1 ))
     done
-    [ -e /var/run/qubes-service/"$1" ]
+    [ -e /run/qubes-service/"$1" ]
 }
 
 under_systemd() {

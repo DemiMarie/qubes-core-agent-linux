@@ -1,6 +1,6 @@
 [Unit]
 Description=Qubes updates proxy (tinyproxy)
-ConditionPathExists=|/var/run/qubes-service/qubes-updates-proxy
+ConditionPathExists=|/run/qubes-service/qubes-updates-proxy
 After=qubes-iptables.service
 
 [Service]

@@ -8,7 +8,7 @@
 # processname: tinyproxy
 # config:      /etc/tinyproxy/tinyproxy-updates.conf
 # config:      /etc/sysconfig/tinyproxy-updates
-# pidfile:     /var/run/tinyproxy/tinyproxy-updates.pid
+# pidfile:     /run/tinyproxy/tinyproxy-updates.pid
 #
 # Note: pidfile is created by tinyproxy in its config
 # see PidFile in the configuration file.

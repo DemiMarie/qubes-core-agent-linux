@@ -1,6 +1,6 @@
 [Unit]
 Description=Update system time each 6h
-ConditionPathExists=!/var/run/qubes-service/clocksync
+ConditionPathExists=!/run/qubes-service/clocksync
 
 [Timer]
 OnBootSec=10s

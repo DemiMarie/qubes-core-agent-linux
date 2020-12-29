@@ -1,6 +1,6 @@
 [Unit]
 Description=Periodically check for updates
-ConditionPathExists=/var/run/qubes-service/qubes-update-check
+ConditionPathExists=/run/qubes-service/qubes-update-check
 
 [Timer]
 OnBootSec=5min

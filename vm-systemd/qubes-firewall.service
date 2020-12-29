@@ -1,6 +1,6 @@
 [Unit]
 Description=Qubes firewall updater
-ConditionPathExists=/var/run/qubes-service/qubes-firewall
+ConditionPathExists=/run/qubes-service/qubes-firewall
 After=qubes-iptables.service
 Before=qubes-network.service
 

@@ -14,7 +14,7 @@ addrule()
 }
 export PATH=$PATH:/sbin:/bin
 # shellcheck disable=SC1091
-. /var/run/qubes/qubes-ns
+. /run/qubes/qubes-ns
 if [ "X$NS1" = "X" ] ; then exit ; fi
 iptables -t nat -F PR-QBS
 FIRSTONE=yes
