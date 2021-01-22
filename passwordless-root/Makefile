@@ -8,7 +8,7 @@ PAMCONFIGSDIR = /usr/share/pam-configs/
 
 install:
 	install -d -m 0750 $(DESTDIR)$(SUDOERSDIR)
-	if [ -f /etc/redhat-release ] || [ -f /etc/debian_version ]; then \
+	if sudo --help | grep -q SELinux; then
 		exec install -D -m 0440 qubes.sudoers $(DESTDIR)$(SUDOERSDIR)/qubes; \
 	else \
 		sed -E '/^[^#]/s/\<(ROLE|TYPE)=[A-Za-z0-9_]+[[:space:]]+//g' qubes.sudoers | \
