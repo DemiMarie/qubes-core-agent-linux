@@ -169,6 +169,8 @@ Obsoletes:  qubes-core-vm-doc < 4.0.0
 Conflicts:  qubes-gui-agent < 4.1.6
 BuildRequires: gcc
 BuildRequires: pandoc
+# ‘sudo --help’ is used during the build
+BuildRequires: sudo
 BuildRequires: xen-devel
 BuildRequires: libX11-devel
 BuildRequires: qubes-utils-devel >= 3.1.3
