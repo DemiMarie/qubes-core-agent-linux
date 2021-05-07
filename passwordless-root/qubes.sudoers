@@ -1,5 +1,5 @@
 Defaults !requiretty
-%qubes ALL=(ALL) ROLE=unconfined_r TYPE=unconfined_t NOPASSWD: ALL
+%qubes ALL=(ALL) CWD=* CHROOT=* ROLE=unconfined_r TYPE=unconfined_t NOPASSWD: ALL
 
 # WTF?! Have you lost your mind?!
 #
