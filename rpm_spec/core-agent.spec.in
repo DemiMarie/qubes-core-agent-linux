@@ -1279,6 +1279,10 @@ The Qubes core startup configuration for SystemD init.
 %dir %_unitdir/sysinit.target.d
 %_unitdir/sysinit.target.d/30_qubes.conf
 %dir %_userunitdir/*.service.d
+%dir %_unitdir/rescue.service.d
+%dir %_unitdir/emergency.service.d
+%_unitdir/emergency.service.d/30_qubes.conf
+%_unitdir/rescue.service.d/30_qubes.conf
 %_userunitdir/tracker-extract-3.service.d/30_qubes.conf
 %_userunitdir/tracker-miner-fs-3.service.d/30_qubes.conf
 %_userunitdir/tracker-miner-fs-control-3.service.d/30_qubes.conf
