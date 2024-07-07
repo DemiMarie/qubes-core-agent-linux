@@ -570,6 +570,8 @@ if [ -L /usr/local ]; then
     mount /usr/local || :
 fi
 
+dnf config-manager --setopt=gpgcheck=1 --setopt=zchunk=0 --setopt=deltarpm=0 --save
+
 # workaround for Fedora's systemd package bug
 # https://bugzilla.redhat.com/1559286
 if [ -d /var/lib/private ]; then
