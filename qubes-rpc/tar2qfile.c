@@ -1013,5 +1013,3 @@ int main(int argc, char **argv)
 	notify_end_and_wait_for_result();
 	return 0;
 }
-
-
